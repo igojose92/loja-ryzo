@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+/* ==========================================
+   AJUSTES DA BARRA DE PESQUISA (MOBILE E RESPONSIVO)
+   ========================================== */
+
+/* Container geral da barra de pesquisa ativa no topo */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Caixa do input de pesquisa centralizada e com tamanho adaptado para celular */
+.search-container input, 
+.search-bar {
+  flex: 1;
+  max-width: 260px;
+  min-width: 100px;
+  margin: 0 auto;
+}
+
+/* Grupo do botão Fechar + X para ficarem sempre lado a lado na mesma linha */
+.close-search-btn, 
+.fechar-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-size: 13px;
+}
