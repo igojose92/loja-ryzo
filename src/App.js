@@ -179,13 +179,19 @@ function App() {
             font-size: 12px !important;
             white-space: nowrap !important;
           }
-          /* Ajuste automático dos banners no celular para exibição completa */
+          /* Ajuste dos banners no celular: fundo branco e altura compacta para ficarem próximos */
+          .responsive-banner-section {
+            height: auto !important;
+            min-height: 180px;
+            max-height: 280px;
+            background-color: #ffffff !important;
+            margin-bottom: 0px !important;
+          }
           .responsive-banner {
             height: auto !important;
-            min-height: 250px;
-            max-height: 400px;
+            max-height: 280px;
             object-fit: contain !important;
-            background-color: #000;
+            background-color: #ffffff !important;
           }
         }
       `}</style>
@@ -409,7 +415,7 @@ function App() {
       {currentView === 'home' && (
         <main style={{ width: '100%' }}>
           {/* Primeiro Banner Principal */}
-          <section style={{ height: '100vh', width: '100%', position: 'relative' }}>
+          <section className="responsive-banner-section" style={{ height: '100vh', width: '100%', position: 'relative' }}>
             <img className="responsive-banner" src="/baner site.png" alt="Banner RYZO" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
             <div style={{ position: 'absolute', top: '50%', left: '20px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)' }}>&#10094;</div>
             <div style={{ position: 'absolute', top: '50%', right: '20px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)' }}>&#10095;</div>
@@ -418,7 +424,7 @@ function App() {
           {/* Frase de Transição */}
           <div style={{ 
             width: '100%', 
-            padding: '50px 0', 
+            padding: '30px 0', 
             backgroundColor: '#ffffff', 
             textAlign: 'center' 
           }}>
@@ -435,7 +441,7 @@ function App() {
           </div>
 
           {/* Segundo Banner com Vídeo */}
-          <section className="responsive-banner" style={{ height: '90vh', width: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#111' }}>
+          <section className="responsive-banner-section" style={{ height: '90vh', width: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#ffffff' }}>
             <img 
               className="responsive-banner"
               src="/baner site.png" 
