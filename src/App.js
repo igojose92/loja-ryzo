@@ -179,19 +179,21 @@ function App() {
             font-size: 12px !important;
             white-space: nowrap !important;
           }
-          /* Ajuste dos banners no celular: fundo branco e altura compacta para ficarem próximos */
+          /* Banners e espaçamentos compactos no celular */
           .responsive-banner-section {
             height: auto !important;
-            min-height: 180px;
-            max-height: 280px;
+            min-height: 160px;
+            max-height: 240px;
             background-color: #ffffff !important;
-            margin-bottom: 0px !important;
           }
           .responsive-banner {
             height: auto !important;
-            max-height: 280px;
+            max-height: 240px;
             object-fit: contain !important;
             background-color: #ffffff !important;
+          }
+          .transition-text-section {
+            padding: 15px 0 !important;
           }
         }
       `}</style>
@@ -422,14 +424,14 @@ function App() {
           </section>
 
           {/* Frase de Transição */}
-          <div style={{ 
+          <div className="transition-text-section" style={{ 
             width: '100%', 
-            padding: '30px 0', 
+            padding: '50px 0', 
             backgroundColor: '#ffffff', 
             textAlign: 'center' 
           }}>
             <h2 style={{ 
-              fontSize: '24px', 
+              fontSize: '20px', 
               fontWeight: '300', 
               letterSpacing: '4px', 
               textTransform: 'uppercase', 
