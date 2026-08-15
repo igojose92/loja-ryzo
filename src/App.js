@@ -179,21 +179,25 @@ function App() {
             font-size: 12px !important;
             white-space: nowrap !important;
           }
-          /* Banners e espaçamentos compactos no celular */
+          /* Banners e espaçamentos ultracompactos no celular */
           .responsive-banner-section {
             height: auto !important;
-            min-height: 160px;
-            max-height: 240px;
+            min-height: 150px;
+            max-height: 220px;
             background-color: #ffffff !important;
           }
           .responsive-banner {
             height: auto !important;
-            max-height: 240px;
+            max-height: 220px;
             object-fit: contain !important;
             background-color: #ffffff !important;
           }
           .transition-text-section {
-            padding: 15px 0 !important;
+            padding: 8px 0 !important;
+          }
+          .banner-arrow {
+            font-size: 20px !important;
+            padding: 4px 8px !important;
           }
         }
       `}</style>
@@ -419,21 +423,21 @@ function App() {
           {/* Primeiro Banner Principal */}
           <section className="responsive-banner-section" style={{ height: '100vh', width: '100%', position: 'relative' }}>
             <img className="responsive-banner" src="/baner site.png" alt="Banner RYZO" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-            <div style={{ position: 'absolute', top: '50%', left: '20px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)' }}>&#10094;</div>
-            <div style={{ position: 'absolute', top: '50%', right: '20px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)' }}>&#10095;</div>
+            <div className="banner-arrow" style={{ position: 'absolute', top: '50%', left: '10px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)', zIndex: 5 }}>&#10094;</div>
+            <div className="banner-arrow" style={{ position: 'absolute', top: '50%', right: '10px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)', zIndex: 5 }}>&#10095;</div>
           </section>
 
           {/* Frase de Transição */}
           <div className="transition-text-section" style={{ 
             width: '100%', 
-            padding: '50px 0', 
+            padding: '25px 0', 
             backgroundColor: '#ffffff', 
             textAlign: 'center' 
           }}>
             <h2 style={{ 
-              fontSize: '20px', 
+              fontSize: '18px', 
               fontWeight: '300', 
-              letterSpacing: '4px', 
+              letterSpacing: '3px', 
               textTransform: 'uppercase', 
               color: '#0F2F25',
               margin: 0 
