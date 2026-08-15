@@ -179,6 +179,14 @@ function App() {
             font-size: 12px !important;
             white-space: nowrap !important;
           }
+          /* Ajuste automático dos banners no celular para exibição completa */
+          .responsive-banner {
+            height: auto !important;
+            min-height: 250px;
+            max-height: 400px;
+            object-fit: contain !important;
+            background-color: #000;
+          }
         }
       `}</style>
       
@@ -402,7 +410,7 @@ function App() {
         <main style={{ width: '100%' }}>
           {/* Primeiro Banner Principal */}
           <section style={{ height: '100vh', width: '100%', position: 'relative' }}>
-            <img src="/baner site.png" alt="Banner RYZO" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+            <img className="responsive-banner" src="/baner site.png" alt="Banner RYZO" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
             <div style={{ position: 'absolute', top: '50%', left: '20px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)' }}>&#10094;</div>
             <div style={{ position: 'absolute', top: '50%', right: '20px', cursor: 'pointer', color: '#fff', fontSize: '40px', transform: 'translateY(-50%)' }}>&#10095;</div>
           </section>
@@ -427,14 +435,16 @@ function App() {
           </div>
 
           {/* Segundo Banner com Vídeo */}
-          <section style={{ height: '90vh', width: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#111' }}>
+          <section className="responsive-banner" style={{ height: '90vh', width: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#111' }}>
             <img 
+              className="responsive-banner"
               src="/baner site.png" 
               alt="Fallback Vídeo" 
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} 
             />
 
             <video 
+              className="responsive-banner"
               autoPlay 
               muted 
               loop 
