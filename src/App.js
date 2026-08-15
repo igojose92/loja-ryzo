@@ -150,11 +150,12 @@ function App() {
         /* Ajustes responsivos para telas menores (Celulares e Tablets) */
         @media (max-width: 768px) {
           header {
-            padding: 10px 20px !important;
-            height: 80px !important;
+            padding: 8px 12px !important;
+            height: 70px !important;
+            gap: 6px !important;
           }
           .site-logo {
-            height: 50px !important;
+            height: 45px !important;
           }
           .desktop-hide-text {
             display: none !important;
@@ -165,10 +166,18 @@ function App() {
             padding: 20px 30px !important;
           }
           .main-content-padding {
-            padding: 100px 20px 40px 20px !important;
+            padding: 90px 15px 40px 15px !important;
           }
           .account-drawer {
             width: 100% !important;
+          }
+          .mobile-search-input-wrapper {
+            max-width: 170px !important;
+            padding: 6px 10px !important;
+          }
+          .mobile-close-btn {
+            font-size: 12px !important;
+            white-space: nowrap !important;
           }
         }
       `}</style>
@@ -327,7 +336,7 @@ function App() {
         </div>
 
         {currentView === 'search' ? (
-          <div style={{ 
+          <div className="mobile-search-input-wrapper" style={{ 
             display: 'flex', 
             alignItems: 'center', 
             backgroundColor: '#ffffff', 
@@ -335,10 +344,11 @@ function App() {
             padding: '8px 15px', 
             width: '100%',
             maxWidth: '450px',
+            margin: '0 auto',
             border: '1px solid #ddd',
             boxSizing: 'border-box'
           }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2F25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '10px' }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F2F25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px', flexShrink: 0 }}>
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
@@ -366,8 +376,12 @@ function App() {
 
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center', color: '#fff' }}>
           {currentView === 'search' ? (
-            <span onClick={goHome} style={{ fontSize: '14px', letterSpacing: '0.5px', fontWeight: '500', cursor: 'pointer', color: '#fff' }}>
-              Fechar ✕
+            <span 
+              className="mobile-close-btn"
+              onClick={goHome} 
+              style={{ fontSize: '14px', letterSpacing: '0.5px', fontWeight: '500', cursor: 'pointer', color: '#fff', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: '4px' }}
+            >
+              FECHAR ✕
             </span>
           ) : (
             <>
